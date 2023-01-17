@@ -1,4 +1,6 @@
-﻿namespace MoodAnalyzerProgram
+﻿using MoodAnalyzerProgram;
+
+namespace MoodAnalyzerProblem
 {
     internal class Program
     {
@@ -7,7 +9,8 @@
             Console.WriteLine("How is your mood Happy or Sad");
             string message = Console.ReadLine();
             MoodAnalyzer moodAnalyzer = new MoodAnalyzer();
-            Console.WriteLine(moodAnalyzer.AnalyseMood(message));
+            Console.WriteLine(moodAnalyzer.AnalyzeMood);
+
         }
     }
 }
