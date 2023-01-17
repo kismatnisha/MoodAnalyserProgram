@@ -1,4 +1,5 @@
 using MoodAnalyzerProgram;
+using static MoodAnalyzerProgram.MoodAnalyser;
 
 namespace MoodAnalyserTest
 {
@@ -6,19 +7,19 @@ namespace MoodAnalyserTest
     public class UnitTest1
     {
         //UC3
-        //TC 3.1
+        //TC 3.2
         [TestMethod]
-        public void GivenNullMessage_WhenAnalyse_ShouldReturnHappy()
+        public void GivenEmptyMessage_WhenAnalyse_ShouldReturnHappy()
         {
-            string message = null;
-            MoodAnalyzer moodAnalyzer = new MoodAnalyzer(message);
+            string message = string.Empty;
+            MoodAnalyser moodAnalyzer = new MoodAnalyser(message);
             try
             {
                 string actutal = moodAnalyzer.AnalyseMood();
             }
             catch (MoodAnalyserException ex)
             {
-                Assert.AreEqual(ex.Message, "Message is ull");
+                Assert.AreEqual(ex.Message, "Message is Empty");
             }
         }
     }

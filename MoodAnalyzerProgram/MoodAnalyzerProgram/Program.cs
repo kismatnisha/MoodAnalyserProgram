@@ -2,13 +2,13 @@
 
 namespace MoodAnalyzerProblem
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
             Console.WriteLine("How is your mood Happy or Sad");
             string message = Console.ReadLine();
-            MoodAnalyzer moodAnalyzer = new MoodAnalyzer();
+            MoodAnalyser moodAnalyzer = new MoodAnalyser();
             Console.WriteLine(moodAnalyzer.AnalyseMood);
 
         }
