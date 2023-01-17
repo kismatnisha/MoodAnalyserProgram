@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace MoodAnalyzerProgram
 {
-    
-        public class MoodAnalyser
-        {
+    public class MoodAnalyser
+    {
+        
             public string message;
             public MoodAnalyser()
             {
@@ -17,11 +17,11 @@ namespace MoodAnalyzerProgram
             {
                 this.message = message;
             }
-            public string AnalyseMood()
+            public string AnalyseMood(string? message)
             {
                 if (message == string.Empty)
                 {
-                    throw new MoodAnalyserException(MoodAnalyserException.ExceptionType.EMPTY_MOOD, "Message is Empty");
+                    throw new MoodAnalyserException(MoodAnalyserException.ExceptionType.NO_SUCH_CLASS, "Message is Empty");
                 }
                 try
                 {
@@ -36,11 +36,8 @@ namespace MoodAnalyzerProgram
                 }
                 catch (MoodAnalyserException)
                 {
-                    throw new MoodAnalyserException(MoodAnalyserException.ExceptionType.NULL_MOOD, "Message is Null");
+                    throw new MoodAnalyserException(MoodAnalyserException.ExceptionType.NO_SUCH_METHOD, "Message is Null");
                 }
             }
-
-
-        }
+    }
 }
-
